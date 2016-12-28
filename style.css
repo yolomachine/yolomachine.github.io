@@ -1,0 +1,162 @@
+@font-face {
+    font-family: Reckoner Bold;
+    src: url('reckoner.bold.ttf') format("truetype");
+}
+
+* { 
+	-webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none; 
+}
+
+body {
+    text-align: center;
+    background-color: #fff;
+}
+
+canvas {
+    background-color: #000;
+    border: 5px solid #ddd;
+    -moz-box-shadow:    inset 0 0 20px #fff;
+    -webkit-box-shadow: inset 0 0 20px #fff;
+    box-shadow:         inset 0 0 20px #fff;
+}
+
+.field {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.menu {
+    margin-top: 18%
+}
+
+.selector {
+    display: inline;
+    background: transparent;
+    border: none;
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+
+#return-button {
+    background-image: url('Images/return.png');
+}
+
+#reset-button {
+    background-image: url('Images/reset.png');
+}
+
+#fwd-button {
+    background-image: url('Images/arrow_right.png');
+}
+
+#bwd-button {
+    background-image: url('Images/arrow_left.png');
+}
+
+#inc-button {
+    background-image: url('Images/plus.png');
+}
+
+#dec-button {
+    background-image: url('Images/minus.png');
+}
+
+.menu>div {
+    margin: 20px;
+    width: 500px;
+    padding: 10px;
+    font-family: Reckoner Bold;
+    font-size: 64px;
+    border: 5px solid #000;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 48px -25px rgba(0,0,0,0.92);
+    -moz-box-shadow: 0px 0px 48px -25px rgba(0,0,0,0.92);
+    box-shadow: 0px 0px 48px -25px rgba(0,0,0,0.92);
+}
+.menu>div:hover {
+    background-color: #eee;
+}
+
+.clicked {
+    background-color: #eee;
+}
+
+.menu>div, .menu>div>label {
+    cursor: pointer;
+}
+
+.score {
+    position: absolute;
+    height: 100px;
+    line-height: 125px;
+    padding: 0;
+    text-align:center;
+    vertical-align:middle;
+    margin-left: 30px;
+    font-family: Reckoner Bold;
+    font-size: 64px;
+}
+
+.progress-bar {
+    padding: 0px;
+    margin-top: 1%;
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+}
+
+.progress-status {
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #00B16A;
+}
+
+.level-select-row {
+    margin-top: 2%;
+    display: inline-block;
+}
+
+.level-select-tile {
+    font-family: "Reckoner Bold";
+    margin: 10px;
+    border: 5px solid #000;
+    border-radius: 5px;
+    font-size: 200px;
+    height: 200px;
+    width: 200px;
+}
+
+.level-select-tile, .level-select-tile>label {
+    cursor: pointer;
+}
+
+.level-select-row:nth-of-type(odd)>.level-select-tile:nth-of-type(even),
+.level-select-row:nth-of-type(even)>.level-select-tile:nth-of-type(odd) {
+    background-color: #000;
+    color: #fff;
+}
+.level-select-row:nth-of-type(odd)>.level-select-tile:nth-of-type(odd),
+.level-select-row:nth-of-type(even)>.level-select-tile:nth-of-type(even) {
+    background-color: #fff;
+    color: #000;
+}
+
+.level-select-row:nth-of-type(odd)>.level-select-tile:nth-of-type(even):hover,
+.level-select-row:nth-of-type(even)>.level-select-tile:nth-of-type(odd):hover,
+.level-select-row:nth-of-type(even)>.level-select-tile:nth-of-type(even):hover,
+.level-select-row:nth-of-type(odd)>.level-select-tile:nth-of-type(odd):hover {
+    background-color: #aaa;
+    color: #fff;
+}
